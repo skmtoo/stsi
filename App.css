@@ -1,0 +1,83 @@
+/* メインコンテナ */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 画面全体をカバー */
+  overflow: hidden; /* 全体のスクロールを防ぐ */
+}
+
+/* コンテンツエリア */
+.content {
+  flex: 1;
+  padding-bottom: 60px; /* フッター分の余白 */
+  overflow-y: auto; /* 必要な場合のみ縦スクロールを有効にする */
+  -webkit-overflow-scrolling: touch; /* スクロールがスムーズになるように追加 */
+}
+
+/* エラーページのスタイル */
+.errorPage {
+  padding: 20px;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* スクロールバーのスタイル（オプション） */
+.content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 4px;
+}
+
+/* 店舗情報の簡易表示エリアのスタイル */
+.simple-store-info {
+  max-height: 300px; /* 高さの制限 */
+  overflow-y: auto;  /* 縦スクロール */
+  margin-bottom: 20px; /* 下部の余白 */
+}
+
+/* フッター */
+footer {
+  padding: 20px;
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+}
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8); /* 背景を半透明に */
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ddd;
+  border-top: 6px solid #3498db; /* スピナーの色 */
+  border-radius: 50%;
+  animation: spin 1s linear infinite; /* 回転アニメーション */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner p {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #555;
+}

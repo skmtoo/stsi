@@ -1,0 +1,109 @@
+/* StoreDetailコンポーネント内のみ適用されるように名前空間を追加 */
+.store-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column; /* 縦並びに変更 */
+}
+
+/* 店舗画像 */
+.store-detail .store-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* 店舗情報 */
+.store-detail .store-info {
+  text-align: center;
+  margin-bottom: 20px; /* 下部に余白を追加 */
+}
+
+.store-detail .store-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.store-detail .store-info p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* 店舗説明 */
+.store-detail .store-description {
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+/* レビューセクション */
+.store-detail .reviews {
+  margin-bottom: 30px;
+}
+
+.store-detail .reviews h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.store-detail .review {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+/* ボタン */
+.store-detail .review-button-container,
+.store-detail .back-button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.store-detail .review-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.store-detail .review-button:hover {
+  background-color: #0056b3;
+}
+
+.store-detail button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.store-detail button:hover {
+  background-color: #0056b3;
+}
+
+/* レスポンシブデザイン調整 */
+@media screen and (max-width: 768px) {
+  .store-detail .store-info h2 {
+    font-size: 20px;
+  }
+
+  .store-detail .store-info p {
+    font-size: 14px;
+  }
+
+  .store-detail .store-description {
+    font-size: 14px;
+  }
+}
